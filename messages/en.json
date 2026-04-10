@@ -1,0 +1,12 @@
+
+{
+    "home": {
+        "title" : "Find Your Next Home",
+        "subtitle": "Helping you buy with confidence"
+    },
+    "nav": {
+        "about": "About",
+        "contact": "Contact",
+        "resources": "Resources"
+    }
+}
