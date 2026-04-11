@@ -1,12 +1,26 @@
-
 {
-    "home": {
-        "title" : "Find Your Next Home",
-        "subtitle": "Helping you buy with confidence"
-    },
-    "nav": {
-        "about": "About",
-        "contact": "Contact",
-        "resources": "Resources"
-    }
+  "meta": {
+    "siteName": "Family Real Estate",
+    "defaultTitle": "Family Real Estate",
+    "defaultDescription": "Bilingual real estate guidance and contact support."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "resources": "Resources",
+    "language": "Español"
+  },
+  "home": {
+    "title": "Guidance for your next move",
+    "subtitle": "Helping buyers feel more informed before taking the next step.",
+    "cta": "Get in touch"
+  },
+  "about": {
+    "title": "About",
+    "body": "We help clients understand their options and feel confident before scheduling a meeting."
+  },
+  "footer": {
+    "copyright": "All rights reserved."
+  }
 }

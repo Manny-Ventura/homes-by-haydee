@@ -1,11 +1,26 @@
 {
-  "home": {
-    "title": "Encuentra tu próximo hogar",
-    "subtitle": "Te ayudamos a comprar con confianza"
+  "meta": {
+    "siteName": "Bienes Raíces Familiar",
+    "defaultTitle": "Bienes Raíces Familiar",
+    "defaultDescription": "Orientación bilingüe sobre bienes raíces y contacto inicial."
   },
   "nav": {
+    "home": "Inicio",
     "about": "Sobre mí",
     "contact": "Contacto",
-    "resources": "Recursos"
+    "resources": "Recursos",
+    "language": "English"
+  },
+  "home": {
+    "title": "Orientación para tu próxima compra",
+    "subtitle": "Ayudando a compradores a sentirse más informados antes del siguiente paso.",
+    "cta": "Contáctanos"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "body": "Ayudamos a clientes a entender sus opciones y sentirse más seguros antes de programar una reunión."
+  },
+  "footer": {
+    "copyright": "Todos los derechos reservados."
   }
 }
