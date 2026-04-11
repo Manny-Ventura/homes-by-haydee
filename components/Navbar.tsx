@@ -16,7 +16,7 @@ export default function Navbar() {
       <nav className="w-full">
         <div className="flex hidden w-full justify-between p-4 md:flex">
           <div className="px-auto">
-            <h3>Manny Ventura</h3>
+            <h3>Homes by Haydee</h3>
           </div>
           <Link
             href="/"
@@ -28,23 +28,23 @@ export default function Navbar() {
             className="duration:150 hidden border-b-2 border-transparent text-(--text-secondary) transition-colors hover:border-(--accent) hover:text-(--text-primary) md:flex"
             href="/projects"
           >
-            Projects
+            About
           </Link>
           <Link
             className="duration:150 hidden border-b-2 border-transparent text-(--text-secondary) transition-colors hover:border-(--accent) hover:text-(--text-primary) md:flex"
             href="/about"
           >
-            About
+            Contact
           </Link>
           <Link
             className="duration:150 hidden border-b-2 border-transparent text-(--text-secondary) transition-colors hover:border-(--accent) hover:text-(--text-primary) md:flex"
             href="/contact"
           >
-            Contact
+            Resources
           </Link>
         </div>
         <div className="flex items-center justify-between p-4 md:hidden">
-          <h1>Manny Ventura</h1>
+          <h1>Homes by Haydee</h1>
           <button
             className="mr-2 h-full justify-self-end md:hidden"
             onClick={toggleMenu}
@@ -64,19 +64,19 @@ export default function Navbar() {
               className="duration:150 w-full border-2 border-(--border) bg-(--surface) py-5 text-center transition-colors hover:bg-(--bg)"
               href="/projects"
             >
-              Projects
+              About
             </a>
             <a
               className="duration:150 w-full border-2 border-(--border) bg-(--surface) py-5 text-center transition-colors hover:bg-(--bg)"
               href="/about"
             >
-              About
+              Contact
             </a>
             <a
               className="duration:150 w-full border-2 border-(--border) bg-(--surface) py-5 text-center transition-colors hover:bg-(--bg)"
               href="/contact"
             >
-              Contact
+              Resources
             </a>
           </div>
         )}
