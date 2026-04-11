@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Real Estate Lead Generation Website (Bilingual)
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project is a bilingual (English/Spanish) real estate website built for a family-operated real estate business. Its primary goal is to improve lead quality and streamline the initial client contact process.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Rather than functioning as a full property marketplace, the site is designed as a **lead-generation and qualification platform**, helping prospective clients better understand their needs before reaching out.
+
+## Goals
+
+* Provide a clean, professional online presence
+* Support both English and Spanish-speaking users
+* Capture high-quality leads through a simple, user-friendly contact flow
+* Reduce friction for users while still collecting meaningful context
+* Be maintainable long-term by a single developer
+
+## Key Features
+
+* 🌐 **Bilingual Routing**
+
+  * English and Spanish versions of all pages
+  * Locale-based routing (`/en`, `/es`)
+  * Shared component structure with localized content
+
+* 🏠 **Marketing Pages**
+
+  * Home
+  * About
+  * Contact
+  * Resources
+
+* 📝 **Contact & Buyer Intake Form**
+
+  * Core contact fields (name, email, phone, message)
+  * Optional buyer context (budget, timeline, etc.)
+  * Designed to balance ease-of-use with lead quality
+
+* 📱 **SMS Notification Integration**
+
+  * Form submissions trigger a text notification to the agent
+  * Enables fast response without requiring a CRM
+
+* 🧮 **Mortgage Calculator**
+
+  * Standalone resource page
+  * Helps users better understand affordability before contacting
+
+## Architecture
+
+This project uses a **frontend-first architecture with serverless backend functionality**, avoiding unnecessary complexity.
+
+### Tech Stack
+
+* **Framework:** Next.js (App Router)
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS (assumed)
+* **Routing:** Dynamic locale segment (`[lang]`)
+* **Server Logic:** Next.js Route Handlers (serverless functions)
+* **Deployment:** Vercel (recommended)
+
+### Design Principles
+
+* **Keep the MVP small and focused**
+* **Avoid premature backend complexity**
+* **Separate structure from content**
+* **Design for future extensibility without overengineering**
+
+## Internationalization Strategy
+
+* Shared page and component structure
+* Locale-specific content via message files (`en.json`, `es.json`)
+* URL-based language separation for clarity and SEO
+
+## Project Structure (Simplified)
+
+```
+app/
+  [lang]/
+    layout.tsx
+    page.tsx
+    about/
+    contact/
+    resources/
+
+components/
+  (shared UI components)
+
+lib/
+  i18n.ts
+
+messages/
+  en.json
+  es.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Future Enhancements
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The architecture intentionally leaves room for:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* MLS / IDX property search integration
+* CRM integration (lead tracking, follow-ups)
+* Enhanced analytics and conversion tracking
+* Expanded resource content (buyer guides, FAQs)
+* Multi-step intake flows (if needed)
 
-## Learn More
+## Non-Goals (Current Scope)
 
-To learn more about Next.js, take a look at the following resources:
+* Custom MLS ingestion or property database
+* User accounts or dashboards
+* Complex backend systems
+* Full mortgage application processing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Lessons & Engineering Focus
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project emphasizes:
 
-## Deploy on Vercel
+* Practical architecture decisions under real constraints
+* Avoiding overengineering in early stages
+* Designing for maintainability and clarity
+* Building software that aligns with actual business needs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Running Locally
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm install
+npm run dev
+```
+
+## Deployment
+
+Recommended: Vercel
+
+* Seamless integration with Next.js
+* Built-in support for serverless route handlers
+* Easy environment variable management (for SMS integration, etc.)
+
+---
+
+## Author
+
+Built and maintained as part of a real client project, with a focus on long-term ownership, simplicity, and practical engineering judgment.
