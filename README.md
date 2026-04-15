@@ -68,6 +68,9 @@ This project uses a **frontend-first architecture with serverless backend functi
 
 ## 🌍 Routing & Internationalization
 
+Using App Router, not Pages Router:
+<https://nextjs.org/docs/app/guides/internationalization>
+
 The app uses a dynamic route segment:
 
 ```txt
