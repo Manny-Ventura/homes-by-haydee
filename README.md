@@ -20,38 +20,38 @@ Its primary goal is to improve lead quality and streamline initial client contac
 
 ## Key Features
 
-### 🌐 Bilingual Routing
+### Bilingual Routing
 
 - English and Spanish versions of all pages
 - Locale-based routing (`/en`, `/es`)
 - Shared UI structure with localized content
 
-### 🏠 Marketing Pages
+### Marketing Pages
 
 - Home
 - About
 - Contact
 - Resources
 
-### 📝 Contact & Buyer Intake
+### Contact & Buyer Intake
 
 - Core fields (name, email, phone, message)
 - Optional buyer context (budget, timeline, etc.)
 - Designed to balance simplicity with lead quality
 
-### 📱 SMS Notifications
+### SMS Notifications
 
 - Form submissions trigger text notifications to the agent
 - Enables fast response without requiring a CRM
 
-### 🧮 Mortgage Calculator
+### Mortgage Calculator
 
 - Dedicated resource page
 - Helps users estimate affordability before contacting
 
 ---
 
-## 🏗 Architecture Overview
+## Architecture Overview
 
 This project uses a **frontend-first architecture with serverless backend functionality**.
 
@@ -66,7 +66,7 @@ This project uses a **frontend-first architecture with serverless backend functi
 
 ---
 
-## 🌍 Routing & Internationalization
+## Routing & Internationalization
 
 Using App Router, not Pages Router:
 <https://nextjs.org/docs/app/guides/internationalization>
