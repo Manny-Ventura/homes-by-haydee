@@ -3,6 +3,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import React from "react";
+import { routing } from "../i18n/routing";
+import { notFound } from "next/navigation";
+import { setRequestLocale } from "next-intl/server";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,13 +24,26 @@ export const metadata: Metadata = {
   description: "Professional real estate website of Haydee Irizarry",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+type Props = {
   children: React.ReactNode;
-}>) {
+  params: Promise<{locale: string}>;
+}
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({locale}));
+}
+
+export default async function RootLayout({ children, params }: Props) {
+  
+  const {locale} = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className="flex min-h-screen flex-col">
         <header className="border-2 border-[var(--border)] bg-[var(--surface)]">
           <Navbar />
