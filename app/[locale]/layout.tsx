@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import React from "react";
-import { routing } from "../i18n/routing";
+import { routing } from "../../i18n/routing";
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 
