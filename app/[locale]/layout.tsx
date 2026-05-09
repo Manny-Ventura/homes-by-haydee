@@ -45,15 +45,17 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <body className="flex min-h-screen flex-col">
-        <header className="border-2 border-[var(--border)] bg-[var(--surface)]">
-          <Navbar />
-        </header>
+        <NextIntlClientProvider>
+          <header className="border-2 border-[var(--border)] bg-[var(--surface)]">
+            <Navbar />
+          </header>
 
-        <main className="mx-auto max-w-2xl grow space-y-24 px-6 py-12">{children}</main>
+          <main className="mx-auto max-w-2xl grow space-y-24 px-6 py-12">{children}</main>
 
-        <footer className="h-full border-2 border-[var(--border)] bg-[var(--surface)] p-10 text-center">
-          <Footer />
-        </footer>
+          <footer className="h-full border-2 border-[var(--border)] bg-[var(--surface)] p-10 text-center">
+            <Footer />
+          </footer>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

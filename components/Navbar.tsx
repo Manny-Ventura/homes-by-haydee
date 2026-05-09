@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { X, Menu } from "lucide-react";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const t = useTranslations('nav')
 
   function toggleMenu() {
     setOpen(!open);
@@ -22,7 +24,7 @@ export default function Navbar() {
             href="/"
             className="duration:150 hidden border-b-2 border-transparent text-(--text-secondary) transition-colors hover:border-(--accent) hover:text-(--text-primary) md:flex"
           >
-            Home
+            {t('home')}
           </Link>
           <Link
             className="duration:150 hidden border-b-2 border-transparent text-(--text-secondary) transition-colors hover:border-(--accent) hover:text-(--text-primary) md:flex"
