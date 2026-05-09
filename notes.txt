@@ -1,0 +1,3 @@
+Not checked for the app:
+
+1. Have not configured for cookie preferences.
