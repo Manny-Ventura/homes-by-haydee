@@ -30,19 +30,19 @@ export default function Navbar() {
             className="duration:150 hidden border-b-2 border-transparent text-(--text-secondary) transition-colors hover:border-(--accent) hover:text-(--text-primary) md:flex"
             href="/projects"
           >
-            About
+            {t('about')}
           </Link>
           <Link
             className="duration:150 hidden border-b-2 border-transparent text-(--text-secondary) transition-colors hover:border-(--accent) hover:text-(--text-primary) md:flex"
             href="/about"
           >
-            Contact
+            {t('contact')}
           </Link>
           <Link
             className="duration:150 hidden border-b-2 border-transparent text-(--text-secondary) transition-colors hover:border-(--accent) hover:text-(--text-primary) md:flex"
             href="/contact"
           >
-            Resources
+            {t('resources')}
           </Link>
         </div>
         <div className="flex items-center justify-between p-4 md:hidden">
