@@ -46,13 +46,13 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html lang={locale}>
       <body className="flex min-h-screen flex-col">
         <NextIntlClientProvider>
-          <header className="border-2 border-[var(--border)] bg-[var(--surface)]">
+          <header className="border-2 border-(--border) bg-surface">
             <Navbar />
           </header>
 
           <main className="mx-auto max-w-2xl grow space-y-24 px-6 py-12">{children}</main>
 
-          <footer className="h-full border-2 border-[var(--border)] bg-[var(--surface)] p-10 text-center">
+          <footer className="h-full border-2 border-border bg-surface p-10 text-center">
             <Footer />
           </footer>
         </NextIntlClientProvider>
