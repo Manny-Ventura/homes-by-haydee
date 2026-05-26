@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import React from "react";
@@ -42,23 +43,25 @@ export default async function LocaleLayout({ children, params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col`}
       >
-        <NextIntlClientProvider>
-          <header className="border-b bg-background">
-            <Navbar />
-          </header>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <NextIntlClientProvider>
+            <header className="border-b bg-background">
+              <Navbar />
+            </header>
 
-          <main className="mx-auto w-full max-w-2xl grow space-y-8 px-6 py-12">
-            {children}
-          </main>
+            <main className="mx-auto w-full max-w-2xl grow space-y-8 px-6 py-12">
+              {children}
+            </main>
 
-          <footer className="mt-auto border-t bg-background">
-            <Footer />
-          </footer>
-        </NextIntlClientProvider>
+            <footer className="mt-auto border-t bg-background">
+              <Footer />
+            </footer>
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

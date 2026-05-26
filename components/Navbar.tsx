@@ -13,6 +13,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -55,21 +56,24 @@ export default function Navbar() {
         Homes by Haydee
       </Link>
 
-      <div className="hidden items-center gap-1 md:flex">
-        {navItems.map((item) => (
-          <NavLink key={item.href} href={item.href}>
-            {t(item.labelKey)}
-          </NavLink>
-        ))}
-      </div>
+      <div className="flex items-center gap-2">
+        <div className="hidden items-center gap-1 md:flex">
+          {navItems.map((item) => (
+            <NavLink key={item.href} href={item.href}>
+              {t(item.labelKey)}
+            </NavLink>
+          ))}
+        </div>
 
-      <Sheet open={open} onOpenChange={setOpen}>
-        <SheetTrigger
-          className="md:hidden"
-          render={<Button variant="outline" size="icon" aria-label="Open menu" />}
-        >
-          <Menu />
-        </SheetTrigger>
+        <ThemeToggle />
+
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger
+            className="md:hidden"
+            render={<Button variant="outline" size="icon" aria-label="Open menu" />}
+          >
+            <Menu />
+          </SheetTrigger>
         <SheetContent side="right" className="w-full sm:max-w-xs">
           <SheetHeader>
             <SheetTitle>Menu</SheetTitle>
@@ -87,7 +91,8 @@ export default function Navbar() {
             ))}
           </div>
         </SheetContent>
-      </Sheet>
+        </Sheet>
+      </div>
     </nav>
   );
 }
