@@ -1,10 +1,14 @@
 import { useTranslations } from "next-intl";
 
+import { Separator } from "@/components/ui/separator";
+
 export default function Footer() {
-    const t = useTranslations('footer')
-    return ( <>
-        <div>Footer!</div>
-        <div>{t('copyright')}</div>
-        </>
-    );
+  const t = useTranslations("footer");
+
+  return (
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 py-8 text-center text-sm text-muted-foreground md:px-6">
+      <Separator />
+      <p>{t("copyright")}</p>
+    </div>
+  );
 }

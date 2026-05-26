@@ -1,88 +1,93 @@
-'use client'
+"use client";
 
-import Link from "next/link";
-import { X, Menu } from "lucide-react";
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
+import { Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-export default function Navbar() {
-  const [open, setOpen] = useState(false);
-  const t = useTranslations('nav')
+import { Link } from "@/i18n/navigation";
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
 
-  function toggleMenu() {
-    setOpen(!open);
-  }
+const navItems = [
+  { href: "/", labelKey: "home" as const },
+  { href: "/about", labelKey: "about" as const },
+  { href: "/contact", labelKey: "contact" as const },
+  { href: "/resources", labelKey: "resources" as const },
+];
+
+function NavLink({
+  href,
+  children,
+  className,
+  onClick,
+}: {
+  href: string;
+  children: ReactNode;
+  className?: string;
+  onClick?: () => void;
+}) {
+  return (
+    <Button
+      variant="ghost"
+      nativeButton={false}
+      className={cn("text-muted-foreground hover:text-foreground", className)}
+      render={<Link href={href} onClick={onClick} />}
+    >
+      {children}
+    </Button>
+  );
+}
+
+export default function Navbar() {
+  const t = useTranslations("nav");
+  const [open, setOpen] = useState(false);
 
   return (
-    <>
-      <nav className="w-full">
-        <div className="flex hidden w-full justify-between p-4 md:flex">
-          <div className="px-auto">
-            <h3>Homes by Haydee</h3>
+    <nav className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 px-4 py-3 md:px-6">
+      <Link href="/" className="text-lg font-semibold tracking-tight">
+        Homes by Haydee
+      </Link>
+
+      <div className="hidden items-center gap-1 md:flex">
+        {navItems.map((item) => (
+          <NavLink key={item.href} href={item.href}>
+            {t(item.labelKey)}
+          </NavLink>
+        ))}
+      </div>
+
+      <Sheet open={open} onOpenChange={setOpen}>
+        <SheetTrigger
+          className="md:hidden"
+          render={<Button variant="outline" size="icon" aria-label="Open menu" />}
+        >
+          <Menu />
+        </SheetTrigger>
+        <SheetContent side="right" className="w-full sm:max-w-xs">
+          <SheetHeader>
+            <SheetTitle>Menu</SheetTitle>
+          </SheetHeader>
+          <div className="flex flex-col gap-1 px-4">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.href}
+                href={item.href}
+                className="w-full justify-start"
+                onClick={() => setOpen(false)}
+              >
+                {t(item.labelKey)}
+              </NavLink>
+            ))}
           </div>
-          <Link
-            href="/"
-            className="duration:150 hidden border-b-2 border-transparent text-(--text-secondary) transition-colors hover:border-(--accent) hover:text-(--text-primary) md:flex"
-          >
-            {t('home')}
-          </Link>
-          <Link
-            className="duration:150 hidden border-b-2 border-transparent text-(--text-secondary) transition-colors hover:border-(--accent) hover:text-(--text-primary) md:flex"
-            href="/projects"
-          >
-            {t('about')}
-          </Link>
-          <Link
-            className="duration:150 hidden border-b-2 border-transparent text-(--text-secondary) transition-colors hover:border-(--accent) hover:text-(--text-primary) md:flex"
-            href="/about"
-          >
-            {t('contact')}
-          </Link>
-          <Link
-            className="duration:150 hidden border-b-2 border-transparent text-(--text-secondary) transition-colors hover:border-(--accent) hover:text-(--text-primary) md:flex"
-            href="/contact"
-          >
-            {t('resources')}
-          </Link>
-        </div>
-        <div className="flex items-center justify-between p-4 md:hidden">
-          <h1>Homes by Haydee</h1>
-          <button
-            className="mr-2 h-full justify-self-end md:hidden"
-            onClick={toggleMenu}
-          >
-            {open ? <X size={44} /> : <Menu size={44} />}
-          </button>
-        </div>
-        {open && (
-          <div className="flex flex-col items-center">
-            <a
-              className="duration:150 w-full border-2 border-(--border) bg-(--surface) py-5 text-center transition-colors hover:bg-(--bg)"
-              href="/"
-            >
-              Home
-            </a>
-            <a
-              className="duration:150 w-full border-2 border-(--border) bg-(--surface) py-5 text-center transition-colors hover:bg-(--bg)"
-              href="/projects"
-            >
-              About
-            </a>
-            <a
-              className="duration:150 w-full border-2 border-(--border) bg-(--surface) py-5 text-center transition-colors hover:bg-(--bg)"
-              href="/about"
-            >
-              Contact
-            </a>
-            <a
-              className="duration:150 w-full border-2 border-(--border) bg-(--surface) py-5 text-center transition-colors hover:bg-(--bg)"
-              href="/contact"
-            >
-              Resources
-            </a>
-          </div>
-        )}
-      </nav>
-    </>
+        </SheetContent>
+      </Sheet>
+    </nav>
   );
 }

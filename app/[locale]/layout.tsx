@@ -26,16 +26,15 @@ export const metadata: Metadata = {
 
 type Props = {
   children: React.ReactNode;
-  params: Promise<{locale: string}>;
-}
+  params: Promise<{ locale: string }>;
+};
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({locale}));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
-  
-  const {locale} = await params;
+  const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
@@ -44,15 +43,19 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale}>
-      <body className="flex min-h-screen flex-col">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col`}
+      >
         <NextIntlClientProvider>
-          <header className="border-2 border-(--border) bg-surface">
+          <header className="border-b bg-background">
             <Navbar />
           </header>
 
-          <main className="mx-auto max-w-2xl grow space-y-24 px-6 py-12">{children}</main>
+          <main className="mx-auto w-full max-w-2xl grow space-y-8 px-6 py-12">
+            {children}
+          </main>
 
-          <footer className="h-full border-2 border-border bg-surface p-10 text-center">
+          <footer className="mt-auto border-t bg-background">
             <Footer />
           </footer>
         </NextIntlClientProvider>
