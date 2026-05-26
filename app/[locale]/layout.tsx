@@ -21,8 +21,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Homes by Haydee",
-  description: "Professional real estate website of Haydee Irizarry",
+  title: "Homes by Haydee | Haydee F Irizarry",
+  description:
+    "Bilingual real estate guidance in the Charleston and Lowcountry area. Broker Associate, License #87619, AgentOwned Realty.",
 };
 
 type Props = {
@@ -53,7 +54,7 @@ export default async function LocaleLayout({ children, params }: Props) {
               <Navbar />
             </header>
 
-            <main className="mx-auto w-full max-w-2xl grow space-y-8 px-6 py-12">
+            <main className="mx-auto w-full max-w-3xl grow space-y-8 px-6 py-12">
               {children}
             </main>
 

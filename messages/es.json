@@ -1,8 +1,8 @@
 {
   "meta": {
-    "siteName": "Bienes Raíces Familiar",
-    "defaultTitle": "Bienes Raíces Familiar",
-    "defaultDescription": "Orientación bilingüe sobre bienes raíces y contacto inicial."
+    "siteName": "Homes by Haydee",
+    "defaultTitle": "Homes by Haydee | Haydee F Irizarry",
+    "defaultDescription": "Orientación bilingüe en bienes raíces en el área de Charleston y Lowcountry. Broker Associate con más de 15 años de experiencia."
   },
   "nav": {
     "home": "Inicio",
@@ -12,58 +12,107 @@
     "language": "English"
   },
   "home": {
-    "title": "Orientación para tu próxima compra",
-    "subtitle": "Ayudando a compradores a sentirse más informados antes del siguiente paso.",
-    "cta": "Contáctanos",
-    "intro": "Ya sea tu primera compra o un nuevo vecindario, Haydee te ayuda a entender el proceso con claridad — en inglés o en español.",
+    "title": "Encuentra tu hogar en el Lowcountry",
+    "subtitle": "Orientación bilingüe en bienes raíces con Haydee F Irizarry",
+    "intro": "Ya sea tu primera compra, una venta o explorar el área de Charleston, Haydee aporta más de 15 años de experiencia como broker associate y administradora de propiedades — en inglés o en español.",
+    "cta": "Contactar a Haydee",
+    "stats": {
+      "experience": {
+        "value": "15+",
+        "label": "Años en bienes raíces"
+      },
+      "languages": {
+        "value": "EN / ES",
+        "label": "Servicio bilingüe"
+      },
+      "specialty": {
+        "value": "Compra y venta",
+        "label": "Hogares en Lowcountry"
+      }
+    },
     "features": {
       "buyers": {
-        "title": "Orientación para compradores",
-        "body": "Aprende qué esperar en cada etapa, desde la pre-aprobación hasta el cierre, sin presión."
+        "title": "Orientación para compradores y vendedores",
+        "body": "Desde la pre-aprobación hasta el cierre, Haydee te ayuda a entender cada paso para avanzar con confianza — sin presión."
       },
       "local": {
-        "title": "Conocimiento local",
-        "body": "Obtén contexto sobre vecindarios, tiempos y próximos pasos según tus metas."
+        "title": "Experiencia en el área de Charleston",
+        "body": "Sirviendo a Summerville, Goose Creek, Moncks Corner, Ridgeville y comunidades cercanas del Lowcountry."
       },
       "bilingual": {
         "title": "Apoyo bilingüe",
-        "body": "Haz preguntas y revisa opciones en el idioma con el que te sientas más cómodo."
+        "body": "Orientación en inglés y español para compradores y vendedores, incluyendo apoyo a la comunidad hispana durante todo el proceso."
       }
     },
-    "closing": "¿Listo para hablar de tus opciones? Escríbenos para una conversación sin compromiso."
+    "closing": "¿Listo para hablar de tu próximo paso? Escríbenos para una conversación sin compromiso sobre comprar o vender en Carolina del Sur.",
+    "aboutCta": "Conoce más sobre Haydee"
   },
   "about": {
-    "title": "Sobre mí",
-    "body": "Ayudamos a clientes a entender sus opciones y sentirse más seguros antes de programar una reunión.",
-    "detail": "Haydee Irizarry trabaja con compradores que buscan orientación clara antes de tomar decisiones importantes. El enfoque es educar primero — ayudarte a sentirte preparado, no apresurado."
+    "title": "Sobre Haydee",
+    "name": "Haydee F Irizarry",
+    "role": "Broker Associate",
+    "license": "Licencia ID: 87619",
+    "brokerage": "AgentOwned Realty",
+    "bio1": "Soy de herencia dominicana y puertorriqueña, nacida y criada entre la ciudad de Nueva York y Filadelfia. Completé mi licenciatura en inglés en la Universidad de la Ciudad de Nueva York (CUNY) y más tarde obtuve mi licencia de bienes raíces del estado de Nueva York en la NYU.",
+    "bio2": "Trabajé como broker associate y administradora de propiedades por más de 15 años. Aunque amo Nueva York, me mudé a Summerville, Carolina del Sur en 2006 por el clima, la hospitalidad sureña y para que mi hijo creciera con más sentido de comunidad y tiempo al aire libre.",
+    "bio3": "Como consumidora, sé lo emocionante y estresante que puede ser comprar una casa. Mi meta es ayudarte a alcanzar tu sueño de ser propietario y disfrutar el proceso — entendiendo cada paso del camino.",
+    "bio4": "Soy bilingüe y me apasiona ayudar a la comunidad hispana a mejorar su nivel de vida. Te asistiré en todo lo que pueda para que seas un consumidor informado, con pleno conocimiento de tus opciones para comprar o rentar — sin importar tu estatus migratorio.",
+    "bioZillow": "Me mudé al área de Charleston para alejarme del frío y criar a mi hijo en un ritmo de vida más tranquilo. Soy madre soltera, me encanta cocinar y viajar cuando puedo, y una de las formas en que ayudo a las personas es ayudándoles a encontrar un hogar.",
+    "facts": {
+      "experience": "Más de 15 años de experiencia",
+      "specialty": "Administración de propiedades y ventas residenciales",
+      "languages": "Inglés, español",
+      "area": "Charleston y Lowcountry, SC"
+    }
   },
   "contact": {
-    "title": "Contacto",
-    "body": "¿Tienes una pregunta sobre comprar o quieres agendar una conversación? Envíanos un mensaje y te responderemos pronto.",
-    "email": "Correo",
-    "phone": "Teléfono",
-    "placeholderEmail": "hello@homesbyhaydee.com",
-    "placeholderPhone": "(555) 123-4567"
+    "title": "Contactar a Haydee",
+    "body": "¿Tienes una pregunta sobre comprar o vender en el Lowcountry? Envía un mensaje y Haydee te responderá lo antes posible.",
+    "brokerage": "Correduría",
+    "brokerageValue": "AgentOwned Realty",
+    "license": "Licencia",
+    "licenseValue": "87619 (Carolina del Sur)",
+    "languages": "Idiomas",
+    "languagesValue": "Inglés, español",
+    "area": "Área de servicio",
+    "areaValue": "Summerville, Goose Creek, Moncks Corner, Ridgeville y el gran Charleston",
+    "note": "¿Prefieres otro medio de contacto? Indica en tu mensaje cómo deseas que te respondan.",
+    "getStarted": "Comenzar",
+    "aboutLink": "Leer la biografía completa de Haydee"
   },
   "resources": {
     "title": "Recursos",
-    "body": "Puntos de partida útiles mientras exploras tus opciones.",
+    "body": "Temas útiles mientras exploras comprar o vender en Carolina del Sur.",
     "items": {
       "checklist": {
         "title": "Lista para compradores primerizos",
-        "body": "Una lista simple de pasos para revisar antes de visitar casas."
+        "body": "Revisa financiamiento, pre-aprobación, investigación de vecindarios y pasos de cierre antes de visitar casas en el Lowcountry."
       },
       "questions": {
         "title": "Preguntas para tu agente",
-        "body": "Sabe qué preguntar para comparar orientación y sentirte seguro."
+        "body": "Entiende el momento del mercado, estrategia de ofertas, inspecciones y qué esperar como comprador o vendedor en Carolina del Sur."
       },
       "glossary": {
-        "title": "Glosario de términos hipotecarios",
-        "body": "Definiciones en lenguaje sencillo para palabras comunes del proceso."
+        "title": "Términos de hipoteca y cierre",
+        "body": "Definiciones en lenguaje sencillo para palabras que escucharás durante la pre-aprobación, suscripción y cierre."
+      },
+      "bilingual": {
+        "title": "Comprar en un hogar bilingüe",
+        "body": "Orientación en inglés o español para que quienes toman decisiones entiendan las opciones de compra o renta con confianza."
+      },
+      "lowcountry": {
+        "title": "Mudarse al Lowcountry",
+        "body": "Qué saber sobre Summerville, Goose Creek, Moncks Corner y comunidades cercanas al reubicarte desde otro estado."
+      },
+      "management": {
+        "title": "Experiencia en administración de propiedades",
+        "body": "La experiencia de Haydee como administradora aporta perspectiva sobre mantenimiento, rentas y decisiones de propiedad a largo plazo."
       }
     }
   },
   "footer": {
+    "tagline": "Homes by Haydee · Charleston y Lowcountry, SC",
+    "credentials": "Haydee F Irizarry · Broker Associate · Licencia #87619 · AgentOwned Realty",
     "copyright": "Todos los derechos reservados."
   }
 }

@@ -13,6 +13,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { LocaleSwitcher } from "@/components/locale-switcher";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 
@@ -65,6 +66,8 @@ export default function Navbar() {
           ))}
         </div>
 
+        <LocaleSwitcher />
+
         <ThemeToggle />
 
         <Sheet open={open} onOpenChange={setOpen}>
@@ -78,7 +81,8 @@ export default function Navbar() {
           <SheetHeader>
             <SheetTitle>Menu</SheetTitle>
           </SheetHeader>
-          <div className="flex flex-col gap-1 px-4">
+          <div className="flex flex-col gap-4 px-4">
+            <LocaleSwitcher className="w-fit" onSwitch={() => setOpen(false)} />
             {navItems.map((item) => (
               <NavLink
                 key={item.href}

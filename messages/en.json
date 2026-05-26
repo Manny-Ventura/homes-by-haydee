@@ -1,8 +1,8 @@
 {
   "meta": {
-    "siteName": "Family Real Estate",
-    "defaultTitle": "Family Real Estate",
-    "defaultDescription": "Bilingual real estate guidance and contact support."
+    "siteName": "Homes by Haydee",
+    "defaultTitle": "Homes by Haydee | Haydee F Irizarry",
+    "defaultDescription": "Bilingual real estate guidance in the Charleston and Lowcountry area. Broker Associate with 15+ years of experience."
   },
   "nav": {
     "home": "Home",
@@ -12,58 +12,107 @@
     "language": "Español"
   },
   "home": {
-    "title": "Guidance for your next move",
-    "subtitle": "Helping buyers feel more informed before taking the next step.",
-    "cta": "Get in touch",
-    "intro": "Whether you are buying your first home or exploring a new neighborhood, Haydee helps you understand the process in plain language — in English or Spanish.",
+    "title": "Find your home in the Lowcountry",
+    "subtitle": "Bilingual real estate guidance with Haydee F Irizarry",
+    "intro": "Whether you are buying your first home, selling, or exploring the Charleston area, Haydee brings more than 15 years of experience as a broker associate and property manager — in English or Spanish.",
+    "cta": "Contact Haydee",
+    "stats": {
+      "experience": {
+        "value": "15+",
+        "label": "Years in real estate"
+      },
+      "languages": {
+        "value": "EN / ES",
+        "label": "Bilingual service"
+      },
+      "specialty": {
+        "value": "Buy & sell",
+        "label": "Lowcountry homes"
+      }
+    },
     "features": {
       "buyers": {
-        "title": "Buyer guidance",
-        "body": "Learn what to expect at each stage, from pre-approval to closing, without the pressure."
+        "title": "Buyer & seller guidance",
+        "body": "From pre-approval to closing, Haydee helps you understand each step so you can move forward with confidence — not pressure."
       },
       "local": {
-        "title": "Local insight",
-        "body": "Get context on neighborhoods, timing, and next steps tailored to your goals."
+        "title": "Charleston area expertise",
+        "body": "Serving Summerville, Goose Creek, Moncks Corner, Ridgeville, and surrounding Lowcountry communities."
       },
       "bilingual": {
         "title": "Bilingual support",
-        "body": "Ask questions and review options in the language you are most comfortable with."
+        "body": "English and Spanish guidance for buyers and sellers, including support for the Hispanic community throughout the process."
       }
     },
-    "closing": "Ready to talk through your options? Reach out for a no-pressure conversation."
+    "closing": "Ready to talk about your next move? Reach out for a no-pressure conversation about buying or selling in South Carolina.",
+    "aboutCta": "Learn more about Haydee"
   },
   "about": {
-    "title": "About",
-    "body": "We help clients understand their options and feel confident before scheduling a meeting.",
-    "detail": "Haydee Irizarry works with buyers who want clear guidance before making big decisions. The focus is education first — helping you feel prepared, not rushed."
+    "title": "About Haydee",
+    "name": "Haydee F Irizarry",
+    "role": "Broker Associate",
+    "license": "License ID: 87619",
+    "brokerage": "AgentOwned Realty",
+    "bio1": "I am of Dominican and Puerto Rican heritage, born and raised between New York City and Philadelphia. I completed my Bachelor's degree in English at the City University of New York (CUNY) and later earned my New York State real estate license through NYU.",
+    "bio2": "I worked as a real estate associate broker and property manager for more than 15 years. As much as I love New York, I moved to Summerville, South Carolina in 2006 for the weather, southern hospitality, and so my son could grow up with more of a community feel and time outdoors.",
+    "bio3": "As a consumer, I know how exciting and stressful buying a home can be. My goal is to help you reach your dream of homeownership and enjoy the process — understanding each step along the way.",
+    "bio4": "I am bilingual and passionate about helping the Hispanic community improve their quality of life. I will assist you in every way I can so you become an informed consumer, with full knowledge of your options to buy or rent — regardless of immigration status.",
+    "bioZillow": "I moved to the Charleston area to get away from the cold and raise my son in a slower-paced environment. I am a single mom who loves to cook and travel when I can, and one of the ways I help people is by helping them find a place to call home.",
+    "facts": {
+      "experience": "15+ years of experience",
+      "specialty": "Property management & residential sales",
+      "languages": "English, Spanish",
+      "area": "Charleston & Lowcountry, SC"
+    }
   },
   "contact": {
-    "title": "Contact",
-    "body": "Have a question about buying or want to schedule a conversation? Send a message and we will get back to you soon.",
-    "email": "Email",
-    "phone": "Phone",
-    "placeholderEmail": "hello@homesbyhaydee.com",
-    "placeholderPhone": "(555) 123-4567"
+    "title": "Contact Haydee",
+    "body": "Have a question about buying or selling in the Lowcountry? Send a message and Haydee will get back to you as soon as possible.",
+    "brokerage": "Brokerage",
+    "brokerageValue": "AgentOwned Realty",
+    "license": "License",
+    "licenseValue": "87619 (South Carolina)",
+    "languages": "Languages",
+    "languagesValue": "English, Spanish",
+    "area": "Service area",
+    "areaValue": "Summerville, Goose Creek, Moncks Corner, Ridgeville, and greater Charleston",
+    "note": "Prefer to connect another way? Mention how you would like to be reached in your message.",
+    "getStarted": "Get started",
+    "aboutLink": "Read Haydee's full bio"
   },
   "resources": {
     "title": "Resources",
-    "body": "Helpful starting points while you explore your options.",
+    "body": "Helpful topics while you explore buying or selling in South Carolina.",
     "items": {
       "checklist": {
         "title": "First-time buyer checklist",
-        "body": "A simple list of steps to review before you start touring homes."
+        "body": "Review financing, pre-approval, neighborhood research, and closing steps before you tour homes in the Lowcountry."
       },
       "questions": {
         "title": "Questions to ask your agent",
-        "body": "Know what to ask so you can compare guidance and feel confident."
+        "body": "Understand market timing, offer strategy, inspections, and what to expect as a buyer or seller in South Carolina."
       },
       "glossary": {
-        "title": "Mortgage terms glossary",
-        "body": "Plain-language definitions for common words you will hear along the way."
+        "title": "Mortgage & closing terms",
+        "body": "Plain-language definitions for words you will hear during pre-approval, underwriting, and closing."
+      },
+      "bilingual": {
+        "title": "Buying as a bilingual household",
+        "body": "Guidance in English or Spanish so every decision-maker understands options for buying or renting with confidence."
+      },
+      "lowcountry": {
+        "title": "Moving to the Lowcountry",
+        "body": "What to know about Summerville, Goose Creek, Moncks Corner, and nearby communities when relocating from out of state."
+      },
+      "management": {
+        "title": "Property management background",
+        "body": "Haydee's experience as a property manager adds perspective on maintenance, rentals, and long-term ownership decisions."
       }
     }
   },
   "footer": {
+    "tagline": "Homes by Haydee · Charleston & Lowcountry, SC",
+    "credentials": "Haydee F Irizarry · Broker Associate · License #87619 · AgentOwned Realty",
     "copyright": "All rights reserved."
   }
 }

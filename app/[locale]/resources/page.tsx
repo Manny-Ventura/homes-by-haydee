@@ -7,7 +7,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-const resourceKeys = ["checklist", "questions", "glossary"] as const;
+const resourceKeys = [
+  "checklist",
+  "questions",
+  "glossary",
+  "bilingual",
+  "lowcountry",
+  "management",
+] as const;
 
 export default function ResourcesPage() {
   const t = useTranslations("resources");
@@ -19,7 +26,7 @@ export default function ResourcesPage() {
         <p className="max-w-prose text-muted-foreground">{t("body")}</p>
       </div>
 
-      <div className="grid gap-4">
+      <div className="grid gap-4 sm:grid-cols-2">
         {resourceKeys.map((key) => (
           <Card key={key}>
             <CardHeader>
