@@ -1,5 +1,7 @@
 import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
 
+import { createPageMetadata } from "@/lib/metadata";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -15,6 +17,15 @@ const detailKeys = [
   "languages",
   "area",
 ] as const;
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return createPageMetadata(locale, "contact");
+}
 
 export default function ContactPage() {
   const t = useTranslations("contact");

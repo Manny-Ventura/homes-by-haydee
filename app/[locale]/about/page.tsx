@@ -1,8 +1,19 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
 
+import { createPageMetadata } from "@/lib/metadata";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return createPageMetadata(locale, "about");
+}
 
 const factKeys = ["experience", "specialty", "languages", "area"] as const;
 

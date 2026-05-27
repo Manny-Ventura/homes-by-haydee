@@ -2,7 +2,7 @@
 
 import { useLocale } from "next-intl";
 
-import { Link, usePathname } from "@/i18n/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -15,6 +15,18 @@ type LocaleSwitcherProps = {
 export function LocaleSwitcher({ className, onSwitch }: LocaleSwitcherProps) {
   const locale = useLocale();
   const pathname = usePathname();
+  const router = useRouter();
+
+  function switchLocale(nextLocale: string) {
+    if (nextLocale === locale) {
+      return;
+    }
+
+    onSwitch?.();
+
+    const hash = window.location.hash;
+    router.replace(`${pathname}${hash}`, { locale: nextLocale, scroll: false });
+  }
 
   return (
     <div
@@ -28,19 +40,13 @@ export function LocaleSwitcher({ className, onSwitch }: LocaleSwitcherProps) {
       {routing.locales.map((loc) => (
         <Button
           key={loc}
+          type="button"
           variant={locale === loc ? "secondary" : "ghost"}
           size="sm"
           className="min-w-9 px-2.5 uppercase"
-          nativeButton={false}
           aria-current={locale === loc ? "true" : undefined}
-          render={
-            <Link
-              href={pathname}
-              locale={loc}
-              onClick={onSwitch}
-              aria-label={loc === "en" ? "English" : "Español"}
-            />
-          }
+          aria-label={loc === "en" ? "English" : "Español"}
+          onClick={() => switchLocale(loc)}
         >
           {loc}
         </Button>

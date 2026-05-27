@@ -2,19 +2,41 @@
   "meta": {
     "siteName": "Homes by Haydee",
     "defaultTitle": "Homes by Haydee | Haydee F Irizarry",
-    "defaultDescription": "Orientación bilingüe en bienes raíces en el área de Charleston y Lowcountry. Broker Associate con más de 15 años de experiencia."
+    "defaultDescription": "Orientación bilingüe en bienes raíces en el área de Charleston y Lowcountry. Broker Associate con más de 15 años de experiencia.",
+    "pages": {
+      "home": {
+        "title": "Encuentra tu hogar en el Lowcountry",
+        "description": "Orientación bilingüe en bienes raíces en Charleston y el Lowcountry. Haydee F Irizarry, Broker Associate con más de 15 años de experiencia."
+      },
+      "about": {
+        "title": "Sobre Haydee",
+        "description": "Conoce a Haydee F Irizarry — Broker Associate bilingüe que sirve a Summerville, Goose Creek y el gran área de Charleston."
+      },
+      "contact": {
+        "title": "Contactar a Haydee",
+        "description": "Comunícate con Haydee F Irizarry para orientación sobre comprar o vender en el Lowcountry. Atención en inglés y español."
+      },
+      "resources": {
+        "title": "Recursos",
+        "description": "Temas que Haydee puede explicarte mientras exploras comprar o vender en Carolina del Sur."
+      }
+    }
   },
   "nav": {
     "home": "Inicio",
     "about": "Sobre mí",
     "contact": "Contacto",
     "resources": "Recursos",
-    "language": "English"
+    "searchHomes": "Buscar casas",
+    "language": "English",
+    "menu": "Menú",
+    "openMenu": "Abrir menú"
   },
   "home": {
     "title": "Encuentra tu hogar en el Lowcountry",
-    "subtitle": "Orientación bilingüe en bienes raíces con Haydee F Irizarry",
-    "intro": "Ya sea tu primera compra, una venta o explorar el área de Charleston, Haydee aporta más de 15 años de experiencia como broker associate y administradora de propiedades — en inglés o en español.",
+    "badge": "Charleston y Lowcountry · Inglés y español",
+    "lead": "Orientación clara y personal para compradores y vendedores — con más de 15 años como Broker Associate y administradora de propiedades.",
+    "serviceArea": "Summerville · Goose Creek · Gran Charleston",
     "cta": "Contactar a Haydee",
     "stats": {
       "experience": {
@@ -30,6 +52,7 @@
         "label": "Hogares en Lowcountry"
       }
     },
+    "featuresHeading": "Cómo puede ayudarte Haydee",
     "features": {
       "buyers": {
         "title": "Orientación para compradores y vendedores",
@@ -44,8 +67,57 @@
         "body": "Orientación en inglés y español para compradores y vendedores, incluyendo apoyo a la comunidad hispana durante todo el proceso."
       }
     },
-    "closing": "¿Listo para hablar de tu próximo paso? Escríbenos para una conversación sin compromiso sobre comprar o vender en Carolina del Sur.",
-    "aboutCta": "Conoce más sobre Haydee"
+    "aboutCta": "Sobre Haydee",
+    "contactHeading": "Ponte en contacto",
+    "contactBody": "Cuéntale a Haydee un poco sobre tus planes. Ella te responderá personalmente — en inglés o en español.",
+    "neighborhoods": {
+      "heading": "Vecindarios",
+      "body": "Haydee ayuda a compradores y vendedores en el gran área de Charleston. Fotos y guías de cada zona próximamente.",
+      "photoComingSoon": "Foto próximamente",
+      "items": {
+        "summerville": {
+          "title": "Summerville",
+          "body": "Calles familiares, encanto histórico y fácil acceso a Charleston.",
+          "imageAlt": "Marcador de área de Summerville"
+        },
+        "gooseCreek": {
+          "title": "Goose Creek",
+          "body": "Opciones accesibles y una comunidad en crecimiento al norte de Charleston.",
+          "imageAlt": "Camino bordeado de robles con musgo español cerca de Goose Creek"
+        },
+        "moncksCorner": {
+          "title": "Moncks Corner",
+          "body": "Más espacio y valor en el borde del Lowcountry.",
+          "imageAlt": "Marcador de área de Moncks Corner"
+        },
+        "mountPleasant": {
+          "title": "Mount Pleasant",
+          "body": "Vida junto al agua, buenas escuelas y acceso rápido a Charleston.",
+          "imageAlt": "Marcador de área de Mount Pleasant"
+        }
+      }
+    },
+    "testimonials": {
+      "heading": "Lo que dicen los clientes",
+      "body": "Reseñas reales de compradores y vendedores aparecerán aquí pronto.",
+      "placeholderLabel": "Próximamente",
+      "items": {
+        "one": "Aquí se añadirá una reseña verificada de un cliente.",
+        "two": "Aquí se añadirá una reseña verificada de un cliente.",
+        "three": "Aquí se añadirá una reseña verificada de un cliente."
+      }
+    }
+  },
+  "contactForm": {
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "timeline": "Plazo (opcional)",
+    "message": "¿Cómo puede ayudarte Haydee?",
+    "submit": "Enviar mensaje",
+    "pendingNote": "El envío en línea se está conectando. Tu mensaje aún no se envía — esta vista previa muestra el diseño del formulario.",
+    "successTitle": "Gracias por escribir",
+    "successBody": "El envío del formulario aún no está conectado. Por favor llama o escribe a Haydee directamente hasta que esté activo."
   },
   "about": {
     "title": "Sobre Haydee",
@@ -82,37 +154,40 @@
   },
   "resources": {
     "title": "Recursos",
-    "body": "Temas útiles mientras exploras comprar o vender en Carolina del Sur.",
+    "body": "Estos son temas que Haydee puede explicarte en inglés o español — en una conversación, no como guías independientes. Escríbele cuando quieras profundizar en cualquiera de ellos.",
     "items": {
       "checklist": {
         "title": "Lista para compradores primerizos",
-        "body": "Revisa financiamiento, pre-aprobación, investigación de vecindarios y pasos de cierre antes de visitar casas en el Lowcountry."
+        "body": "Haydee puede orientarte sobre financiamiento, pre-aprobación, investigación de vecindarios y pasos de cierre antes de visitar casas en el Lowcountry."
       },
       "questions": {
         "title": "Preguntas para tu agente",
-        "body": "Entiende el momento del mercado, estrategia de ofertas, inspecciones y qué esperar como comprador o vendedor en Carolina del Sur."
+        "body": "Haydee puede ayudarte a entender el momento del mercado, estrategia de ofertas, inspecciones y qué esperar como comprador o vendedor en Carolina del Sur."
       },
       "glossary": {
         "title": "Términos de hipoteca y cierre",
-        "body": "Definiciones en lenguaje sencillo para palabras que escucharás durante la pre-aprobación, suscripción y cierre."
+        "body": "Haydee explica las palabras que escucharás durante la pre-aprobación, suscripción y cierre — en lenguaje sencillo, en cualquiera de los dos idiomas."
       },
       "bilingual": {
         "title": "Comprar en un hogar bilingüe",
-        "body": "Orientación en inglés o español para que quienes toman decisiones entiendan las opciones de compra o renta con confianza."
+        "body": "Haydee trabaja en inglés o español para que quienes toman decisiones entiendan las opciones de compra o renta con confianza."
       },
       "lowcountry": {
         "title": "Mudarse al Lowcountry",
-        "body": "Qué saber sobre Summerville, Goose Creek, Moncks Corner y comunidades cercanas al reubicarte desde otro estado."
+        "body": "Haydee puede compartir qué saber sobre Summerville, Goose Creek, Moncks Corner y comunidades cercanas al reubicarte desde otro estado."
       },
       "management": {
         "title": "Experiencia en administración de propiedades",
-        "body": "La experiencia de Haydee como administradora aporta perspectiva sobre mantenimiento, rentas y decisiones de propiedad a largo plazo."
+        "body": "La experiencia de Haydee como administradora aporta perspectiva sobre mantenimiento, rentas y decisiones de propiedad a largo plazo que puede discutir contigo."
       }
     }
   },
   "footer": {
     "tagline": "Homes by Haydee · Charleston y Lowcountry, SC",
     "credentials": "Haydee F Irizarry · Broker Associate · Licencia #87619 · AgentOwned Realty",
+    "quickLinks": "Enlaces rápidos",
+    "fairHousing": "Igualdad de Oportunidades de Vivienda",
+    "privacy": "Política de privacidad próximamente",
     "copyright": "Todos los derechos reservados."
   }
 }

@@ -48,72 +48,56 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
+  /*
+   * Fall palette — professional real estate
+   * Tweak these tokens; UI + scroll backdrop derive from them.
+   */
+  --brand-page: oklch(0.99 0.01 92);
+  --brand-surface: oklch(1 0.004 95);
+  --brand-charcoal: oklch(0.27 0.018 70);
+  --brand-charcoal-muted: oklch(0.5 0.022 70);
+  --brand-maple: oklch(0.48 0.11 48);
+  --brand-amber: oklch(0.7 0.1 72);
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* Scroll backdrop glows (fall accents) */
+  --backdrop-amber: oklch(0.82 0.09 58 / 0.45);
+  --backdrop-sage: oklch(0.84 0.06 148 / 0.35);
+  --backdrop-peach: oklch(0.88 0.07 48 / 0.4);
+  --backdrop-gold: oklch(0.9 0.06 78 / 0.3);
+  --backdrop-horizon: oklch(0.94 0.04 85 / 0.55);
+
+  --background: var(--brand-page);
+  --foreground: var(--brand-charcoal);
+  --card: var(--brand-surface);
+  --card-foreground: var(--brand-charcoal);
+  --popover: var(--brand-surface);
+  --popover-foreground: var(--brand-charcoal);
+  --primary: var(--brand-maple);
+  --primary-foreground: var(--brand-surface);
+  --secondary: oklch(0.96 0.015 88);
+  --secondary-foreground: var(--brand-charcoal);
+  --muted: oklch(0.96 0.015 88);
+  --muted-foreground: var(--brand-charcoal-muted);
+  --accent: oklch(0.94 0.025 82);
+  --accent-foreground: var(--brand-charcoal);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.91 0.018 85);
+  --input: oklch(0.97 0.01 90);
+  --ring: var(--brand-amber);
+  --chart-1: var(--brand-maple);
+  --chart-2: var(--brand-amber);
+  --chart-3: oklch(0.55 0.06 148);
+  --chart-4: var(--brand-charcoal);
+  --chart-5: oklch(0.65 0.08 48);
+  --radius: 0.625rem;
+  --sidebar: var(--brand-surface);
+  --sidebar-foreground: var(--brand-charcoal);
+  --sidebar-primary: var(--brand-maple);
+  --sidebar-primary-foreground: var(--brand-surface);
+  --sidebar-accent: oklch(0.96 0.015 88);
+  --sidebar-accent-foreground: var(--brand-charcoal);
+  --sidebar-border: oklch(0.91 0.018 85);
+  --sidebar-ring: var(--brand-amber);
 }
 
 @layer base {
@@ -133,3 +117,38 @@
     @apply text-inherit no-underline;
   }
 }
+
+/* Parallax scroll backdrop — fall accent washes */
+.scroll-backdrop-base {
+  background: linear-gradient(
+    165deg,
+    var(--brand-page) 0%,
+    oklch(0.985 0.012 88) 45%,
+    var(--brand-page) 100%
+  );
+}
+
+.scroll-backdrop-orb--amber {
+  background: var(--backdrop-amber);
+}
+
+.scroll-backdrop-orb--sage {
+  background: var(--backdrop-sage);
+}
+
+.scroll-backdrop-orb--peach {
+  background: var(--backdrop-peach);
+}
+
+.scroll-backdrop-orb--gold {
+  background: var(--backdrop-gold);
+}
+
+.scroll-backdrop-horizon {
+  background: linear-gradient(
+    to top,
+    var(--backdrop-horizon),
+    transparent 70%
+  );
+}
+

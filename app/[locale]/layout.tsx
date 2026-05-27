@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ScrollBackdrop } from "@/components/scroll-backdrop";
 import "./globals.css";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import React from "react";
 import { routing } from "../../i18n/routing";
 import { notFound } from "next/navigation";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { localeUrl } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,12 +21,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Homes by Haydee | Haydee F Irizarry",
-  description:
-    "Bilingual real estate guidance in the Charleston and Lowcountry area. Broker Associate, License #87619, AgentOwned Realty.",
-};
-
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -33,6 +28,31 @@ type Props = {
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+
+  return {
+    metadataBase: new URL("https://homesbyhaydee.com"),
+    title: {
+      default: t("defaultTitle"),
+      template: `%s | ${t("siteName")}`,
+    },
+    description: t("defaultDescription"),
+    alternates: {
+      canonical: localeUrl(locale),
+      languages: Object.fromEntries(
+        routing.locales.map((loc) => [loc, localeUrl(loc)])
+      ),
+    },
+    openGraph: {
+      siteName: t("siteName"),
+      locale: locale === "es" ? "es_US" : "en_US",
+      type: "website",
+    },
+  };
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
@@ -44,25 +64,26 @@ export default async function LocaleLayout({ children, params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <NextIntlClientProvider>
-            <header className="border-b bg-background">
+        <NextIntlClientProvider>
+          <ScrollBackdrop />
+          <div className="relative flex min-h-screen flex-col">
+            <header className="sticky top-0 z-20 border-b bg-background/85 backdrop-blur-md">
               <Navbar />
             </header>
 
-            <main className="mx-auto w-full max-w-3xl grow space-y-8 px-6 py-12">
+            <main className="relative z-10 mx-auto w-full max-w-5xl grow space-y-8 px-4 py-12 md:px-6">
               {children}
             </main>
 
-            <footer className="mt-auto border-t bg-background">
+            <footer className="relative z-10 mt-auto border-t bg-background/85 backdrop-blur-md">
               <Footer />
             </footer>
-          </NextIntlClientProvider>
-        </ThemeProvider>
+          </div>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

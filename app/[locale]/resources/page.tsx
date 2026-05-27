@@ -1,5 +1,7 @@
 import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
 
+import { createPageMetadata } from "@/lib/metadata";
 import {
   Card,
   CardDescription,
@@ -15,6 +17,15 @@ const resourceKeys = [
   "lowcountry",
   "management",
 ] as const;
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return createPageMetadata(locale, "resources");
+}
 
 export default function ResourcesPage() {
   const t = useTranslations("resources");
